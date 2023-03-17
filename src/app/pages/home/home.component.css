@@ -1,0 +1,49 @@
+/*MENU*/
+nav
+{
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+nav ul
+{
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 30%;
+
+}
+nav ul li
+{
+	display: inline-block;
+    width: 22%;
+    padding: 2%;
+    background-color: #2E923D;
+    margin-left: 3%;
+    border-radius: 50px;
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+nav ul li a svg{
+	display:block;
+	margin:auto;
+  text-align: center;
+  font-size: 10em !important;
+}
+nav ul li a span{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul .active
+{
+    background-color: #FE9901;
+}
