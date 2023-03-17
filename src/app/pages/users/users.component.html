@@ -4,16 +4,16 @@
     <label>PANEL DE CONTRROL</label>
     <ul class="nav flex-column">
       <li class="nav-item active">
-        <a class="nav-link" aria-current="page" href="#">Gestión de usuarios</a>
+        <a class="nav-link" aria-current="page" href="users">Gestión de usuarios</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Gestión de cursos</a>
+        <a class="nav-link" href="courses">Gestión de cursos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Gestión de clases</a>
+        <a class="nav-link" href="class">Gestión de clases</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled">Ajustes</a>
+        <a class="nav-link" href="settings">Ajustes</a>
       </li>
     </ul>
 
@@ -25,64 +25,112 @@
         <li class="breadcrumb-item active" aria-current="page">Gestión de usuarios</li>
       </ol>
     </nav>
-    <a href="/" class="btn btn-success">Registrar</a>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Registrar
+    </button>
     <br /><br />
     <div class="card">
       <div class="card-header home-card-header">
-          <ul class="nav nav-tabs card-header-tabs">
-              <label style="color:#fff">Datos básicos</label>
-          </ul>
+        <ul class="nav nav-tabs card-header-tabs">
+          <label style="color:#fff">Listado de usuarios</label>
+        </ul>
       </div>
       <div class="card-body home-card-body">
-          <div class="mb-3">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Apellidos</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Tipo Usuario</th>
-                  <th scope="col">Fecha Ingreso</th>
-                  <th scope="col">Estado</th>
-                  <th scope="col">Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Rocio</th>
-                  <td>Suarez</td>
-                  <td>rocio@gmail.com</td>
-                  <td>Profesor</td>
-                  <td>06/03/2023</td>
-                  <td>Activo</td>
-                  <td><a href="">Editar</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">Rocio</th>
-                  <td>Suarez</td>
-                  <td>rocio@gmail.com</td>
-                  <td>Profesor</td>
-                  <td>06/03/2023</td>
-                  <td>Activo</td>
-                  <td><a href="">Editar</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">Rocio</th>
-                  <td>Suarez</td>
-                  <td>rocio@gmail.com</td>
-                  <td>Profesor</td>
-                  <td>06/03/2023</td>
-                  <td>Activo</td>
-                  <td><a href="">Editar</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="mb-3">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Email</th>
+                <th scope="col">Tipo Usuario</th>
+                <th scope="col">Fecha Ingreso</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Rocio</th>
+                <td>Suarez</td>
+                <td>rocio@gmail.com</td>
+                <td>Profesor</td>
+                <td>06/03/2023</td>
+                <td>Activo</td>
+                <td><a href="">Editar</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Rocio</th>
+                <td>Suarez</td>
+                <td>rocio@gmail.com</td>
+                <td>Profesor</td>
+                <td>06/03/2023</td>
+                <td>Activo</td>
+                <td><a href="">Editar</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Rocio</th>
+                <td>Suarez</td>
+                <td>rocio@gmail.com</td>
+                <td>Profesor</td>
+                <td>06/03/2023</td>
+                <td>Activo</td>
+                <td><a href="">Editar</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
       </div>
-  </div>
+    </div>
   </div>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar usuario</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="home">
+          <div class="mb-3">
+            <input type="nombre" class="form-control" id="exampleInputNombre" aria-describedby="nombreHelp"
+              placeholder="Tipo usuario">
+          </div>
+          <div class="mb-3">
+            <input type="apellido" class="form-control" id="exampleInputApellido" aria-describedby="apellidoHelp"
+              placeholder="Nombre">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Apellido">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Celular">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Profesion">
+          </div>
+
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Guardar</button>
+      </div>
+    </div>
+  </div>
 </div>
 <br />
 <app-footer></app-footer>
