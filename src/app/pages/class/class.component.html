@@ -1,7 +1,128 @@
 <app-header></app-header>
+<div class="row">
+  <div class="col-lg-2 col-sm-12 menu-vertical">
+    <label>PANEL DE CONTRROL</label>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="users">Gestión de usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="courses">Gestión de cursos</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="class">Gestión de clases</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="settings">Ajustes</a>
+      </li>
+    </ul>
+
+  </div>
+  <div class="col-lg-10 col-sm-12">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="home">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gestión de clases</li>
+      </ol>
+    </nav>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Registrar
+    </button>
+    <br /><br />
+    <div class="card">
+      <div class="card-header home-card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <label style="color:#fff">Listado de clases</label>
+        </ul>
+      </div>
+      <div class="card-body home-card-body">
+        <div class="mb-3">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Curso</th>
+                <th scope="col">Grupo</th>
+                <th scope="col">Profesor</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Emprendimiento</th>
+                <td>Octavo</td>
+                <td>01</td>
+                <td>Rocio del Pilar</td>
+                <td><a href="">Editar</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Emprendimiento</th>
+                <td>Octavo</td>
+                <td>01</td>
+                <td>Rocio del Pilar</td>
+                <td><a href="">Editar</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Emprendimiento</th>
+                <td>Octavo</td>
+                <td>01</td>
+                <td>Rocio del Pilar</td>
+                <td><a href="">Editar</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar clase</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="home">
+          <div class="mb-3">
+            <input type="nombre" class="form-control" id="exampleInputNombre" aria-describedby="nombreHelp"
+              placeholder="Nombre">
+          </div>
+          <div class="mb-3">
+            <input type="apellido" class="form-control" id="exampleInputApellido" aria-describedby="apellidoHelp"
+              placeholder="Curso">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Grupo">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Salon">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Profesor">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Horario">
+          </div>
+
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
 <br />
-<p>
-  class works!
-</p>
-<br>
 <app-footer></app-footer>
