@@ -19,7 +19,6 @@ jobs:
       - name: Ejecutar pruebas con covertura
         run: |
           npm test --no-watch --code-coverage
-          mkdir coverage
           mv coverage/lcov-report/* coverage
       - name: Publicar informes de cobertura como artefactos
         uses: actions/upload-artifact@v2
