@@ -16,8 +16,19 @@ jobs:
           node-version: 16.x
       - name: Instalar dependencias
         run: npm install
-      - name: Test
-        run: npm test --no-watch --code-coverage
+      - name: Ejecutar pruebas con Angular CLI
+        run: npm run test -- --no-watch --no-progress
+      - name: Generar informe de cobertura
+        run: |
+          npx ng test -- --no-watch --code-coverage
+          mkdir coverage
+          mv coverage/lcov-report/* coverage
+        continue-on-error: true
+      - name: Publicar informe de cobertura
+        uses: actions/upload-artifact@v1
+        with:
+          name: coverage
+          path: coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
