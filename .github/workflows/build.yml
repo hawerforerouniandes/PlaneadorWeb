@@ -17,9 +17,7 @@ jobs:
       - name: Instalar dependencias
         run: npm install
       - name: Ejecutar pruebas con covertura
-        run: |
-          npm test --no-watch --code-coverage
-          mv coverage/lcov-report/* coverage
+        run: npm test --no-watch --code-coverage
       - name: Publicar informes de cobertura como artefactos
         uses: actions/upload-artifact@v2
         with:
