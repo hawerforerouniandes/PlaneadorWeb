@@ -1,0 +1,7 @@
+organization=hawerforerouniandes
+projectKey=hawerforerouniandes_PlaneadorWeb
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.49842
+dashboardUrl=https://sonarcloud.io/dashboard?id=hawerforerouniandes_PlaneadorWeb
+ceTaskId=AYuf_lxOxIom--aObzB-
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYuf_lxOxIom--aObzB-
