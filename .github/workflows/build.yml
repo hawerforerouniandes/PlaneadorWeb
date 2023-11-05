@@ -24,11 +24,6 @@ jobs:
           mkdir coverage
           mv coverage/lcov-report/* coverage
         continue-on-error: true
-      - name: Publicar informe de cobertura
-        uses: actions/upload-artifact@v1
-        with:
-          name: coverage
-          path: coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
