@@ -6,6 +6,40 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+  pruebas_y_cobertura:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del código fuente
+      uses: actions/checkout@v2
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Ejecutar pruebas con Angular CLI
+      run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+
+    - name: Generar informe de cobertura
+      run: |
+        npx ng test -- --no-watch --code-coverage
+        mkdir coverage
+        mv coverage/lcov-report/* coverage
+      continue-on-error: true
+
+    - name: Publicar informe de cobertura
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage
+        path: coverage
+
+    - name: Finalizar
+      run: echo "Terminado"
+
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
